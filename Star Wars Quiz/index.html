@@ -1,0 +1,148 @@
+<!--Inspiration and Questions taken from: http://www.zimbio.com/trivia/dOVir7kBoyu/100+Question+Star+Wars+Trivia+Quiz -->
+<!--Info on HTML data attributes: https://stackoverflow.com/questions/4146502/jquery-selectors-on-custom-data-attributes-using-html5-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Wars Quiz</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script src="starwars2.js"></script>
+  <link rel="stylesheet" type="text/css" href="starwars.css">
+
+
+</head>
+
+
+<body>
+<!--<audio id="audio" src="audio/blaster.mp3" autostart="false" >-->
+<!--<a onclick="playSound()">Play</a><a onclick="playSound()">Play</a>-->
+
+  <!--<script>-->
+  <!--function fireBlaster() {-->
+    <!--let selectionSound = document.getElementById("audio");-->
+    <!--sound.play()-->
+  <!--}-->
+<!--</script>-->
+  <!-- <div class="quiz">
+      <header>
+        <h1>Star Wars Quiz!</h1>
+      </header>
+      <div class="quizParent">
+        <div class="questions" data-quest="1" id="question1">
+          <h4>Who directed Rogue One: A Star Wars Story?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1" onclick="shootBlaster()">Gareth Edwards</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">George Lucas</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Patrick Shannon</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">Rian Johnson</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">JJ Abrams</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div id="question2" class="questions" data-quest="2" id="question2" >
+        <h4>How old is Padme Amidala when she's elected to the position of Queen of Naboo?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">25</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">12</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">25</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">22</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5" onclick="shootBlaster()">14</li>
+        </ul>
+        <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="3" id="question3">
+          <h4>What actor physically played Darth Maul?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">Tom Cruise</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2" onclick="shootBlaster()">Ray Park</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Patrick Shannon</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">The Dude Who Played Gollum</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">Jeff Bridges</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="4" id="question4">
+          <h4>Who was the first Jedi to learn how to return from death as a Force Ghost?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">Yoda</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">Obi-Wan Kenobi</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Anakin Skywalker</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4" onclick="shootBlaster()">Qui-Gon Jinn</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">Mace Windu</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="5" id="question5">
+          <h4>What fatal flaw did the rebels exploit to destroy the first Death Star?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">An Unstable Nuclear Reactor Core</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">An Unstable Hypermatter Reactor</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Incomplete Structural Support</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">A Critical Flaw in the Trash Compactor</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5" onclick="shootBlaster()">An Exposed Thermal Exhaust Port</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="6" id="question6">
+          <h4>Who did Ewan McGregor's uncle, Denis Lawson, play in the original 'Star Wars' trilogy?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">Boba Fett</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">Greedo</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3" onclick="shootBlaster()">Wedge Antilles</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">Bib Fortuna</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">Ezra Bridger</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="7" id="question7">
+          <h4>What does the "TIE" in TIE Fighter stand for?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">Turbo Induction Encabulator</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2" onclick="shootBlaster()">Twin Ion Engine</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Techno Incantho Envulcanator</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">Thermal Inverse Engine</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">Two Inset Engines</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="8" id="question8">
+          <h4>Who killed Jango Fett?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1">Obi-Wan Kenobi </li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">Count Dooku</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">Boba Fett</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">Anakin Skywalker</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5" onclick="shootBlaster()">Mace Windu</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="9" id="question9">
+          <h4>What George Lucas demand did Mel Brooks concede to in making 'Spaceballs'?</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1" onclick="shootBlaster()">He agreed not to make any Spaceballs toys</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">He agreed to give Lucas a cameo</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">He agreed to edit out a subplot where the princess has an affair with her brother</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4" >He agreed to roast Steven Spielberg at a charity dinner</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">He agreed to give Lucas a cameo in Blazing Saddles</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+        <div class="questions" data-quest="10" id="question10">
+          <h4>Who said the following: "I find your lack of faith disturbing."</h4>
+          <ul>
+            <li><input type="button" value="a" class="answerOptions" id="choice1" onclick="shootBlaster()">Darth Vader</li>
+            <li><input type="button" value="b" class="answerOptions" id="choice2">Obi-Wan Kenobi</li>
+            <li><input type="button" value="c" class="answerOptions" id="choice3">The Emperor</li>
+            <li><input type="button" value="d" class="answerOptions" id="choice4">Dark Vader</li>
+            <li><input type="button" value="e" class="answerOptions" id="choice5">Yoda</li>
+          </ul>
+          <button id="nextQuestion">Next Question</button>
+        </div>
+      </div>
+  </div> -->
+</body>
+</html>
