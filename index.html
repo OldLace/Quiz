@@ -21,8 +21,7 @@
 <body>
   <h1>Action Movie Quiz</h1>
   <div class="quiz">
-	<tr>
-	  <td>
+
 	  	<div>
 	  		<p class="question">Who is the villain in Die Hard?</p>
 
@@ -40,8 +39,7 @@
 	        <label for="Hans Bruner">Hans Bruner</label>
     		</ul>
 	  	</div>
-	  </td>
-	  <td>
+
 	  	<div>
 	  		<p class="question">John Rambo is a veteran of what war?</p>
 
@@ -59,10 +57,7 @@
 	        <label for="Vietnam War" id="correctString2">Vietnam War</label>
 	    	</ul>
 	  	</div>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
+
 	  	<div>
 	  		<p class="question">Axel Foley is a police detective from _______ who travels to ______ to solve the murder of his friend</p>
 
@@ -80,8 +75,6 @@
 	        <label for="CBH">Chicago, Beverly Hills</label>
 	    	</ul>
 		</div>
-	  </td>
-	  <td>
 	  	<div>
 	  		<p class="question">What action movie sequel involves a cop trying to stop criminals from crashing planes at Dulles Airport?</p>
 
@@ -99,10 +92,7 @@
 	        <label for="dh2" id="correctString4">Die Hard II: Die Harder</label>
     		</ul>
 	  	</div>
-	  </td>
-	</tr>
 
-  <td>
       <div>
           <p class="question">In The Fugitive, where is Dr. Richard Kimble’s bus headed when it crashes, then gets hit by a train?</p>
 
@@ -120,9 +110,7 @@
               <label for="mexico">Mexico</label>
           </ul>
       </div>
-  </td>
 
-  <td>
     <div>
         <p class="question">In 1994's True Lies, Bill Paxton plays a used car salesman trying to seduce Jamie Lee Curtis under the guise that he’s...</p>
 
@@ -131,97 +119,87 @@
             <label for="boot">A Coding Bootcamp Instructor</label>
             <br>
             <input id="yoga" class="answer" type="radio" name="q6" value="0">
-            <label for="yoga" id="correctString6">A Yoga Instructor</label>
+            <label for="yoga">A Yoga Instructor</label>
             <br>
-            <input class="answer" type="radio" name="q6" value="1">
-            <label>A Spy</label>
+            <input class="answer" id="spy" type="radio" name="q6" value="1">
+            <label for="spy" id="correctString6">A Spy</label>
             <br>
-            <input class="answer" type="radio" name="q6" value="0">
-            <label>A Lawyer</label>
+            <input class="answer" id="lawyer" type="radio" name="q6" value="0">
+            <label for="lawyer">A Lawyer</label>
         </ul>
     </div>
-  </td>
 
-  <td>
       <div>
           <p class="question">Actor Peter Weller played what iconic hero in 1987 and once again in 1990?</p>
 
           <ul>
-              <input class="answer" type="radio" name="q7" value="1">
-              <label id="correctString7" >Robocop</label>
+              <input class="answer" id="robo" type="radio" name="q7" value="1">
+              <label id="correctString7" for="robo">Robocop</label>
               <br>
-              <input class="answer" type="radio" name="q7" value="0">
-              <label>John McLane</label>
+              <input class="answer" id="mclane" type="radio" name="q7" value="0">
+              <label for="mclane">John McLane</label>
               <br>
-              <input class="answer" type="radio" name="q7" value="1">
-              <label>James Bond</label>
+              <input class="answer" id="bond" type="radio" name="q7" value="0">
+              <label for="bond">James Bond</label>
               <br>
-              <input class="answer" type="radio" name="q7" value="0">
-              <label>A Lawyer</label>
+              <input class="answer" id="superman" type="radio" name="q7" value="0">
+              <label for="superman">Superman</label>
           </ul>
       </div>
-  </td>
 
-  <td>
       <div>
           <p class="question">In Patriot Games, why does Jack Ryan angrily decide to go back to work for the CIA?</p>
 
           <ul>
-              <input class="answer" type="radio" name="q8" value="1">
-              <label>Because he can’t find a job that pays as well</label>
+              <input class="answer" id="job" type="radio" name="q8" value="0">
+              <label for="job">Because he can’t find a job that pays as well</label>
               <br>
-              <input class="answer" type="radio" name="q8" value="0">
-              <label>Because they kidnapped his best friend</label>
+              <input class="answer" id="kidnap" type="radio" name="q8" value="0">
+              <label for="kidnap">Because they kidnapped his best friend</label>
               <br>
-              <input class="answer" type="radio" name="q8" value="1">
-              <label>Because it's all he knows</label>
+              <input class="answer" id="knows" type="radio" name="q8" value="0">
+              <label for="knows">Because it's all he knows</label>
               <br>
-              <input class="answer" type="radio" name="q8" value="0">
-              <label id="correctString8">Because his wife and daughter were attacked</label>
+              <input class="answer" id="wife" type="radio" name="q8" value="1">
+              <label for="wife" id="correctString8">Because his wife and daughter were attacked</label>
           </ul>
       </div>
-  </td>
 
-  <td>
       <div>
           <p class="question">In Die Hard, What is John McLane NOT wearing during his entire experience in Nakatomi Plaza?</p>
 
           <ul>
-              <input class="answer" type="radio" name="q9" value="1">
-              <label id="correctString9">Shoes</label>
+              <input class="answer" id="shoes" type="radio" name="q9" value="1">
+              <label for="shoes" id="correctString9">Shoes</label>
               <br>
-              <input class="answer" type="radio" name="q9" value="0">
-              <label>A Shirt</label>
+              <input class="answer" id="shirt" type="radio" name="q9" value="0">
+              <label for="shirt">A Shirt</label>
               <br>
-              <input class="answer" type="radio" name="q9" value="1">
-              <label>Pants</label>
+              <input id="pants" class="answer" type="radio" name="q9" value="0">
+              <label for="pants">Pants</label>
               <br>
-              <input class="answer" type="radio" name="q9" value="0">
-              <label>A Belt</label>
+              <input id="belt" class="answer" type="radio" name="q9" value="0">
+              <label for="belt">A Belt</label>
           </ul>
       </div>
-  </td>
 
-  <td>
       <div>
           <p class="question">What percentage of his own stuntwork did Keanu Reeves perform during the filming of John Wick?</p>
 
           <ul>
-              <input class="answer" type="radio" name="q10" value="1">
-              <label>100</label>
+              <input id="100" class="answer" type="radio" name="q10" value="1">
+              <label for="100">100</label>
               <br>
-              <input class="answer" type="radio" name="q10" value="0">
-              <label>99</label>
+              <input id="99" class="answer" type="radio" name="q10" value="0">
+              <label for="99">99</label>
               <br>
-              <input class="answer" type="radio" name="q10" value="1">
-              <label id="correctString10">90</label>
+              <input id="90" class="answer" type="radio" name="q10" value="1">
+              <label for="90" id="correctString10">90</label>
               <br>
-              <input class="answer" type="radio" name="q10" value="0">
-              <label>50</label>
+              <input id="50" class="answer" type="radio" name="q10" value="0">
+              <label for="50">50</label>
           </ul>
       </div>
-    </td>
-  </table>
 <br/>
       <!--<script>-->
           <!--function play() {-->
@@ -231,12 +209,10 @@
       <!--</script>-->
   <div class="gameOver">
       <input class="quizSubmit" id="submitButton" onClick="quizComplete()" type="submit" value="Submit" />
-      <audio id="audio" src="./audio/celebration.mp3" ></audio>
+      <!--<audio id="audio" src="./audio/celebration.mp3" ></audio>-->
       <input type="button" id="restartButton" value="Restart?" onClick="window.location.reload()">
     </div>
 
-
-<!--show score upon submit-->
     <div>
     	<h2 class="quizScore" id="userScore"></h2>
     </div>
