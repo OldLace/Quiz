@@ -1,50 +1,247 @@
 <!doctype html>
-<html>
+<div lang="en">
 <head>
-    <title>Example Domain</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <title>Action Movie Quiz!</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
-    }
-    div {
-        width: 600px;
-        margin: 5em auto;
-        padding: 50px;
-        background-color: #fff;
-        border-radius: 1em;
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    @media (max-width: 700px) {
-        body {
-            background-color: #fff;
-        }
-        div {
-            width: auto;
-            margin: 0 auto;
-            border-radius: 0;
-            padding: 1em;
-        }
-    }
-    </style>    
 </head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./action_movies2.js"></script>
 
+<header></header>
+<!--Quiz Questions taken from: -->
+    <!--http://thepioneerwoman.com/fun-and-learning/action-movie-quiz-answers-and-winners/-->
 <body>
-<div>
-    <h1>Example Domain</h1>
-    <p>This domain is established to be used for illustrative examples in documents. You may use this
-    domain in examples without prior coordination or asking for permission.</p>
-    <p><a href="http://www.iana.org/domains/example">More information...</a></p>
-</div>
+  <h1>Action Movie Quiz</h1>
+  <div class="quiz">
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">Who is the villain in Die Hard?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" id="Hans Mueller" name="q1" value="0">
+	        <label for="Hans Mueller">Hans Mueller</label>
+	    	<br>
+	        <input class="answer" id="Hans Gruber" type="radio" name="q1" value="1">
+	        <label for="Hans Gruber" id="correctString1">Hans Gruber</label>
+	        <br>
+	        <input class="answer" id="Hans Pruner" type="radio" name="q1" value="0">
+	        <label for="Hans Pruner">Hans Pruner</label>
+	        <br>
+	        <input class="answer" id="Hans Bruner" type="radio" name="q1" value="0">
+	        <label for="Hans Bruner">Hans Bruner</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">John Rambo is a veteran of what war?</p>
+
+	    	<ul>
+	        <input class="answer" id="World War II" type="radio" name="q2" value="0">
+	        <label for="World War II">World War II</label>
+	        <br>
+	        <input class="answer" id="Korean War" type="radio" name="q2" value="0">
+	        <label for="Korean War">Korean War</label>
+	        <br>
+	        <input class="answer" id="World War I" type="radio" name="q2" value="0">
+	        <label for="World War I">World War I</label>
+	        <br>
+	        <input class="answer" id="Vietnam War" type="radio" name="q2" value="1">
+	        <label for="Vietnam War" id="correctString2">Vietnam War</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">Axel Foley is a police detective from _______ who travels to ______ to solve the murder of his friend</p>
+
+	    	<ul>
+	        <input class="answer" id="NYBH" type="radio" name="q3" value="0">
+	        <label for="NYBH">New York, Beverly Hills</label>
+	        <br>
+	        <input class="answer" id="DBH" type="radio" name="q3" value="1">
+	        <label for="DBH" id="correctString3">Detroit, Beverly Hills</label>
+	        <br>
+	        <input class="answer" id="DNY" type="radio" name="q3" value="0">
+	        <label for="DNY">Detroit, New York</label>
+	        <br>
+	        <input id="CBH" class="answer" type="radio" name="q3" value="0">
+	        <label for="CBH">Chicago, Beverly Hills</label>
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">What action movie sequel involves a cop trying to stop criminals from crashing planes at Dulles Airport?</p>
+
+	    	<ul>
+	        <input id="LW2" class="answer" type="radio" name="q4" value="0">
+	        <label for="LW2">Lethal Weapon II</label>
+	        <br>
+	        <input id="pred2" class="answer" type="radio" name="q4" value="0">
+	        <label for="pred2">Predator 2</label>
+	        <br>
+	        <input id="rc3" class="answer" type="radio" name="q4" value="0">
+	        <label for="rc3">Robocop III</label>
+	        <br>
+	        <input id="dh2" class="answer" type="radio" name="q4" value="1">
+	        <label for="dh2" id="correctString4">Die Hard II: Die Harder</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+
+  <td>
+      <div>
+          <p class="question">In The Fugitive, where is Dr. Richard Kimble’s bus headed when it crashes, then gets hit by a train?</p>
+
+          <ul>
+              <input id="mc" class="answer" type="radio" name="q5" value="0">
+              <label for="mc">A Medical Conference</label>
+              <br>
+              <input id="dr" class="answer" type="radio" name="q5" value="1">
+              <label for="dr" id="correctString5">Death Row</label>
+              <br>
+              <input id="brazil" class="answer" type="radio" name="q5" value="0">
+              <label for="brazil">Brazil</label>
+              <br>
+              <input id="mexico" class="answer" type="radio" name="q5" value="0">
+              <label for="mexico">Mexico</label>
+          </ul>
+      </div>
+  </td>
+
+  <td>
+    <div>
+        <p class="question">In 1994's True Lies, Bill Paxton plays a used car salesman trying to seduce Jamie Lee Curtis under the guise that he’s...</p>
+
+        <ul>
+            <input id="boot" class="answer" type="radio" name="q6" value="0">
+            <label for="boot">A Coding Bootcamp Instructor</label>
+            <br>
+            <input id="yoga" class="answer" type="radio" name="q6" value="0">
+            <label for="yoga" id="correctString6">A Yoga Instructor</label>
+            <br>
+            <input class="answer" type="radio" name="q6" value="1">
+            <label>A Spy</label>
+            <br>
+            <input class="answer" type="radio" name="q6" value="0">
+            <label>A Lawyer</label>
+        </ul>
+    </div>
+  </td>
+
+  <td>
+      <div>
+          <p class="question">Actor Peter Weller played what iconic hero in 1987 and once again in 1990?</p>
+
+          <ul>
+              <input class="answer" type="radio" name="q7" value="1">
+              <label id="correctString7" >Robocop</label>
+              <br>
+              <input class="answer" type="radio" name="q7" value="0">
+              <label>John McLane</label>
+              <br>
+              <input class="answer" type="radio" name="q7" value="1">
+              <label>James Bond</label>
+              <br>
+              <input class="answer" type="radio" name="q7" value="0">
+              <label>A Lawyer</label>
+          </ul>
+      </div>
+  </td>
+
+  <td>
+      <div>
+          <p class="question">In Patriot Games, why does Jack Ryan angrily decide to go back to work for the CIA?</p>
+
+          <ul>
+              <input class="answer" type="radio" name="q8" value="1">
+              <label>Because he can’t find a job that pays as well</label>
+              <br>
+              <input class="answer" type="radio" name="q8" value="0">
+              <label>Because they kidnapped his best friend</label>
+              <br>
+              <input class="answer" type="radio" name="q8" value="1">
+              <label>Because it's all he knows</label>
+              <br>
+              <input class="answer" type="radio" name="q8" value="0">
+              <label id="correctString8">Because his wife and daughter were attacked</label>
+          </ul>
+      </div>
+  </td>
+
+  <td>
+      <div>
+          <p class="question">In Die Hard, What is John McLane NOT wearing during his entire experience in Nakatomi Plaza?</p>
+
+          <ul>
+              <input class="answer" type="radio" name="q9" value="1">
+              <label id="correctString9">Shoes</label>
+              <br>
+              <input class="answer" type="radio" name="q9" value="0">
+              <label>A Shirt</label>
+              <br>
+              <input class="answer" type="radio" name="q9" value="1">
+              <label>Pants</label>
+              <br>
+              <input class="answer" type="radio" name="q9" value="0">
+              <label>A Belt</label>
+          </ul>
+      </div>
+  </td>
+
+  <td>
+      <div>
+          <p class="question">What percentage of his own stuntwork did Keanu Reeves perform during the filming of John Wick?</p>
+
+          <ul>
+              <input class="answer" type="radio" name="q10" value="1">
+              <label>100</label>
+              <br>
+              <input class="answer" type="radio" name="q10" value="0">
+              <label>99</label>
+              <br>
+              <input class="answer" type="radio" name="q10" value="1">
+              <label id="correctString10">90</label>
+              <br>
+              <input class="answer" type="radio" name="q10" value="0">
+              <label>50</label>
+          </ul>
+      </div>
+    </td>
+  </table>
+<br/>
+      <!--<script>-->
+          <!--function play() {-->
+              <!--let audio = document.getElementById(“audio”)-->
+              <!--audio.play();-->
+          <!--}-->
+      <!--</script>-->
+  <div class="gameOver">
+      <input class="quizSubmit" id="submitButton" onClick="quizComplete()" type="submit" value="Submit" />
+      <audio id="audio" src="./audio/celebration.mp3" ></audio>
+      <input type="button" id="restartButton" value="Restart?" onClick="window.location.reload()">
+    </div>
+
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
 </body>
+    <div class="push"></div>
+</div>
+<footer></footer>
 </html>
